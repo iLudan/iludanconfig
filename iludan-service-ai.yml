@@ -1,0 +1,42 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 8283
+
+spring:
+  profiles: dev
+  application:
+    name: iludan-service-ai
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6171/eureka
+  instance:
+    instance-id: iludan-service-ai
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 3
+
+---
+server:
+  port: 8382
+spring:
+  profiles: beta
+  application:
+    name: iludan-service-ai
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:6071/eureka
+  instance:
+    instance-id: iludan-service-ai
+    prefer-ip-address: true
+    lease-renewal-interval-in-seconds: 2
+    lease-expiration-duration-in-seconds: 3
+
+
