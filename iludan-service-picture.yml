@@ -21,12 +21,6 @@ eureka:
     lease-renewal-interval-in-seconds: 2
     lease-expiration-duration-in-seconds: 3
 
-info:
-  app.name: iludan-service-picture
-  company.name: iludan
-  build.artifactId: $project.artifactId$
-  build.modelVersion: $project.modelVersion$
-
 ---
 server:
   port: 8180
