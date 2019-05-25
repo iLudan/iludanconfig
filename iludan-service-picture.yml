@@ -1,7 +1,13 @@
+spring:
+  profiles:
+    active:
+      -dev
+---
 server:
   port: 8081
 
 spring:
+  profiles: dev
   application:
     name: iludan-service-picture
 
@@ -20,3 +26,12 @@ info:
   company.name: iludan
   build.artifactId: $project.artifactId$
   build.modelVersion: $project.modelVersion$
+
+---
+server:
+  port: 8180
+spring:
+  profiles: beta
+  application:
+    name: iludan-service-picture
+
