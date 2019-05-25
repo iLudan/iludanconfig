@@ -1,0 +1,37 @@
+spring:
+  profiles:
+    active:
+      - dev
+---
+server:
+  port: 6171
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    eviction-interval-timer-in-ms: 1000
+    enable-self-preservation: false
+spring:
+  profiles: dev
+  application:
+    name: iludan-eureka
+
+---
+server:
+  port: 6071
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+  server:
+    eviction-interval-timer-in-ms: 1000
+    enable-self-preservation: false
+spring:
+  profiles: beta
+  application:
+    name: iludan-eureka
