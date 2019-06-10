@@ -4,7 +4,7 @@ spring:
       - dev
 ---
 server:
-  port: 6171
+  port: 1001
 eureka:
   instance:
     hostname: localhost
