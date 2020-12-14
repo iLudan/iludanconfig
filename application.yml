@@ -1,7 +1,7 @@
 spring:
    profiles:
       active:
-      - dev
+      - default
 ---
 spring:
   profiles: dev
@@ -11,4 +11,4 @@ spring:
 spring:
  profiles: default
  application:
-      name: microconfig-test-default
+      name: aisns-user
